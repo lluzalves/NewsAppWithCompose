@@ -14,7 +14,7 @@
 
 # Development 
 
-- Clean Architecture + MMVM Pattern
+- Clean Architecture + MVVM Pattern
 - Kotlin Language
 - Main libs: Compose, Coroutines, Retrofit, OkHttp3, Koin...
 - Modularity [ domain, data, app ]
