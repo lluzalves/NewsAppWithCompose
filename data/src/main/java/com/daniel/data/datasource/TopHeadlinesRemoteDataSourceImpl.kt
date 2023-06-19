@@ -13,7 +13,7 @@ class TopHeadlinesRemoteDataSourceImpl(private val client: Retrofit) :
         client.create(NewsApiService::class.java)
             .getHeadlines(
                 apiKey = BuildConfig.NEWS_API_KEY,
-                countryCode = "us",
+                countryCode = "gb",
                 category = "general"
             )
 

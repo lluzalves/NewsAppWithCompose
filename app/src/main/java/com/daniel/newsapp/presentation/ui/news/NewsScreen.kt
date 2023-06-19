@@ -142,7 +142,13 @@ private fun ArticlesList(news: Article, onArticleTap: (Article) -> Unit) {
                 .height(200.dp)
         ) {
             val model = ImageRequest.Builder(LocalContext.current)
-                .data(news.urlToImage)
+                .data(
+                    if (news.urlToImage.isNotBlank()) {
+                        news.urlToImage
+                    } else {
+                        "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/BBC_News.svg/640px-BBC_News.svg.png"
+                    }
+                )
                 .diskCachePolicy(CachePolicy.ENABLED)
                 .crossfade(1000)
                 .build()
@@ -157,7 +163,7 @@ private fun ArticlesList(news: Article, onArticleTap: (Article) -> Unit) {
                 modifier = Modifier
                     .alpha(transition)
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(15.dp))
+                    .clip(RoundedCornerShape(15.dp)),
             )
         }
         Row(
