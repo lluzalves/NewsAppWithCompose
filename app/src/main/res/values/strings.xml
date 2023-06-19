@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="news_app">News App</string>
+    <string name="news_image_description">Image file for current focused news</string>
+    <string name="created_by">Create By \n</string>
+    <string name="app_creator">Daniel Luz Alves\n</string>
+</resources>
