@@ -4,13 +4,20 @@
 
 |Purpose|Library|
 |-------|-------|
-| View  | Compose|
+|View  | Compose|
 |Async|Coroutines|
 |Network requests|OkHttp3
 |Rest API Library| Retrofit
 |Dependency Injection|Koin
 |Image loading|Coil
 ...
+
+# Development 
+
+- Clean Architecture + MMVM Pattern
+- Kotlin Language
+- Main libs: Compose, Coroutines, Retrofit, OkHttp3, Koin...
+- Modularity [ domain, data, app ]
 
 **Demo**
 
