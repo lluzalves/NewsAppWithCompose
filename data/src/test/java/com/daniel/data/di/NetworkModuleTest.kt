@@ -8,6 +8,7 @@ import org.junit.Test
 import org.junit.jupiter.api.BeforeEach
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
+import org.koin.core.context.stopKoin
 import org.koin.core.logger.Level
 import org.koin.test.KoinTest
 import org.koin.test.check.checkModules
@@ -28,6 +29,7 @@ class NetworkModuleTest : KoinTest {
     fun checkNetworkModule() {
         setUp()
         every { context.cacheDir } returns file
+        stopKoin()
         startKoin {
             printLogger(Level.DEBUG)
             androidContext(context)
