@@ -10,7 +10,7 @@ import com.daniel.domain.entity.Source
 fun toArticleItems(headlinesResponse: NewsHeadlinesResponse) = ArticleItems(
     status = headlinesResponse.status,
     totalResults = headlinesResponse.totalResults,
-    headlines = toArticles(headlinesResponse.headlines).filter { it.author == "BBC" }
+    headlines = toArticles(headlinesResponse.headlines)
 )
 
 private fun toArticles(headlineItems: List<Headline>) = headlineItems.map { headlineItem ->
