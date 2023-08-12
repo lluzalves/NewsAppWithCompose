@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Theme.NewsApp" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/holo_blue_dark</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/baseline_article_24</item>
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/holo_blue_bright</item>
+        <item name="postSplashScreenTheme">@style/Theme.NewsApp</item>
+    </style>
 </resources>

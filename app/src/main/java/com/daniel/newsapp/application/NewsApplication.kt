@@ -1,7 +1,6 @@
-package com.daniel.newsapp.aplication
+package com.daniel.newsapp.application
 
 import android.app.Application
-import android.os.StrictMode
 import com.daniel.newsapp.di.KoinDependencyGraph
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
