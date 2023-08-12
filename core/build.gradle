@@ -16,7 +16,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField "String", "NEWS_API_KEY",'"1fab8d801a6440a1baef721468b4afa4"'
+        buildConfigField "String", "NEWS_API_KEY",'"00000000000000000000000000000000"'
     }
     buildFeatures {
         buildConfig true
@@ -38,10 +38,14 @@ android {
 
 dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
-    testImplementation 'junit:junit:4.13.2'
     implementation "io.insert-koin:koin-android:3.4.2"
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    testImplementation 'junit:junit:4.13.2'
     testImplementation "io.mockk:mockk:1.13.5"
     testImplementation("io.insert-koin:koin-test-junit5:3.1.6")
     testImplementation "android.arch.core:core-testing:1.1.1"
