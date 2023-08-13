@@ -30,7 +30,9 @@
 
 |Purpose|Library|
 |-------|-------|
-|View  | Compose|
+|Initialization | Jetpack App Startup|
+|View  | Jetpack Compose|
+|Analytics | Firebase |
 |Async|Coroutines|
 |Network requests|OkHttp3
 |Rest API Library| Retrofit
