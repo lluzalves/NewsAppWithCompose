@@ -7,7 +7,6 @@ import com.daniel.domain.usecases.GetArticlesUseCase
 import com.daniel.newsapp.presentation.state.NewsHomeState
 import com.daniel.newsapp.presentation.viewmodel.NewsHomeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module
 
 object ApplicationModules {
@@ -24,7 +23,7 @@ object ApplicationModules {
     }
 
 
-    val presentationModule = module {
+    val allNewsFeedModule = module {
         viewModel {
             NewsHomeViewModel(
                 initialState = NewsHomeState.initialState,

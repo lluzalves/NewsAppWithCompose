@@ -6,10 +6,8 @@ import android.net.NetworkCapabilities
 import com.daniel.data.BuildConfig
 
 class NetworkChecker constructor(private val context: Context) {
-
-
-    fun hasConnectivity() : Boolean {
-        val connectivityManager =
+   fun hasConnectivity() : Boolean {
+         val connectivityManager =
             context.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
         val activeNetwork = connectivityManager.activeNetwork

@@ -16,10 +16,14 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.splashscreen.SplashScreenViewProvider
+import com.daniel.newsapp.di.ApplicationModules
+import com.daniel.newsapp.di.ApplicationModules.allNewsFeedModule
 import com.daniel.newsapp.presentation.ui.news.NewsScreen
 import com.daniel.newsapp.presentation.ui.theme.NewsAppTheme
 import com.daniel.newsapp.presentation.viewmodel.NewsHomeViewModel
 import org.koin.android.ext.android.inject
+import org.koin.core.context.loadKoinModules
+import org.koin.core.context.unloadKoinModules
 import java.util.Timer
 import kotlin.concurrent.schedule
 
@@ -29,6 +33,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        loadKoinModules(allNewsFeedModule)
         setContent {
             NewsAppTheme {
                 Surface(
@@ -40,6 +45,11 @@ class MainActivity : ComponentActivity() {
         }
         delayToLoadContent(timer = Timer(), duration = 3000)
         prepareSplashScreen(splashScreen = installSplashScreen())
+    }
+
+    override fun onDestroy() {
+        unloadKoinModules(allNewsFeedModule)
+        super.onDestroy()
     }
 
     private fun delayToLoadContent(timer: Timer, duration: Long) {
