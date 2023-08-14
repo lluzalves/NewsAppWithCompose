@@ -45,7 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     // Koin Test features
-    testImplementation "io.mockk:mockk:1.13.5"
+    testImplementation "io.mockk:mockk:1.13.6"
     // Koin Test features
     testImplementation("io.insert-koin:koin-test-junit5:3.1.6")
 }
