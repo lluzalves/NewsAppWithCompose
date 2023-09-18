@@ -38,7 +38,7 @@ android {
 
 dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
-    implementation "io.insert-koin:koin-android:3.4.2"
+    implementation "io.insert-koin:koin-android:3.5.0"
     api("androidx.startup:startup-runtime:1.1.1")
 
 
