@@ -36,7 +36,7 @@ dependencies {
     implementation project(':core')
     implementation project(':domain')
 
-    implementation "io.insert-koin:koin-android:3.4.2"
+    implementation "io.insert-koin:koin-android:3.5.0"
 
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
